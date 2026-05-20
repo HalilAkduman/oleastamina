@@ -595,6 +595,150 @@
     </svg>
 </div>
 
+<!-- ============================ Growing Olive Tree Story ============================ -->
+<section class="section growing-tree-section" id="tree-story">
+  <div class="container">
+    <div class="tree-grid">
+      
+      <!-- Sticky Column: Tree Graphic -->
+      <div class="tree-sticky-col">
+        <h3 class="tree-title">Zamanın ve Sabrın Hikayesi</h3>
+        
+        <!-- SVG Olive Tree -->
+        <div class="tree-svg-container">
+          <svg class="growing-tree-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="tree-wood" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#4e3b2b"/>
+                <stop offset="50%" stop-color="#735c47"/>
+                <stop offset="100%" stop-color="#4e3b2b"/>
+              </linearGradient>
+              <linearGradient id="olive-leaf-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8aa642"/>
+                <stop offset="100%" stop-color="#3d4f2b"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Trunk -->
+            <path class="tree-path trunk" d="M 200,380 C 195,320 205,260 200,200" 
+                  stroke="url(#tree-wood)" stroke-width="12" stroke-linecap="round" fill="none" />
+            
+            <!-- Left Branch -->
+            <path class="tree-path branch branch-l1" d="M 200,260 C 180,220 150,180 120,150" 
+                  stroke="url(#tree-wood)" stroke-width="8" stroke-linecap="round" fill="none" />
+            
+            <!-- Right Branch -->
+            <path class="tree-path branch branch-r1" d="M 200,240 C 220,200 250,170 280,140" 
+                  stroke="url(#tree-wood)" stroke-width="8" stroke-linecap="round" fill="none" />
+            
+            <!-- Middle top Branch -->
+            <path class="tree-path branch branch-c" d="M 200,200 C 190,160 210,130 200,100" 
+                  stroke="url(#tree-wood)" stroke-width="7" stroke-linecap="round" fill="none" />
+            
+            <!-- Left Sub Branch -->
+            <path class="tree-path branch branch-l2" d="M 120,150 C 100,130 90,110 80,100" 
+                  stroke="url(#tree-wood)" stroke-width="5" stroke-linecap="round" fill="none" />
+            
+            <!-- Right Sub Branch -->
+            <path class="tree-path branch branch-r2" d="M 280,140 C 300,120 310,100 320,90" 
+                  stroke="url(#tree-wood)" stroke-width="5" stroke-linecap="round" fill="none" />
+
+            <!-- Leaves & Fruits positioned by translate groups -->
+            <!-- Left Sub Branch Tip (80, 100) -->
+            <g class="tree-bloom leaf-group-1" transform="translate(80, 100)">
+              <path class="tree-leaf" d="M0,0 C-10,-10 -25,-10 -30,0 C-20,10 -10,5 0,0" fill="url(#olive-leaf-grad)" />
+              <path class="tree-leaf" d="M0,0 C-5,-15 5,-25 20,-20 C15,-5 5,0 0,0" fill="#5a7029" />
+              <circle class="tree-olive" cx="-10" cy="-5" r="5.5" fill="#d4a574" />
+            </g>
+
+            <!-- Left Branch Middle (120, 150) -->
+            <g class="tree-bloom leaf-group-2" transform="translate(120, 150)">
+              <path class="tree-leaf" d="M0,0 C-15,5 -25,-5 -30,-15 C-15,-15 -5,-5 0,0" fill="url(#olive-leaf-grad)" />
+              <circle class="tree-olive" cx="-10" cy="5" r="5" fill="#b08453" />
+            </g>
+
+            <!-- Center Top Tip (200, 100) -->
+            <g class="tree-bloom leaf-group-3" transform="translate(200, 100)">
+              <path class="tree-leaf" d="M0,0 C-10,-15 -5,-30 10,-30 C15,-15 10,0 0,0" fill="url(#olive-leaf-grad)" />
+              <path class="tree-leaf" d="M0,0 C10,-15 5,-30 -10,-30 C-15,-15 -10,0 0,0" fill="#5a7029" />
+              <circle class="tree-olive" cx="0" cy="-15" r="5.5" fill="#d4a574" />
+            </g>
+
+            <!-- Right Sub Branch Tip (320, 90) -->
+            <g class="tree-bloom leaf-group-4" transform="translate(320, 90)">
+              <path class="tree-leaf" d="M0,0 C10,-10 25,-10 30,0 C20,10 10,5 0,0" fill="url(#olive-leaf-grad)" />
+              <path class="tree-leaf" d="M0,0 C5,-15 -5,-25 -20,-20 C-15,-5 -5,0 0,0" fill="#5a7029" />
+              <circle class="tree-olive" cx="10" cy="-5" r="5" fill="#d4a574" />
+            </g>
+
+            <!-- Right Branch Middle (280, 140) -->
+            <g class="tree-bloom leaf-group-5" transform="translate(280, 140)">
+              <path class="tree-leaf" d="M0,0 C15,5 25,-5 30,-15 C15,-15 5,-5 0,0" fill="url(#olive-leaf-grad)" />
+              <circle class="tree-olive" cx="10" cy="5" r="5.5" fill="#b08453" />
+            </g>
+
+            <!-- Extra Leaf clusters for lush look -->
+            <!-- Middle Left (160, 170) -->
+            <g class="tree-bloom leaf-group-6" transform="translate(160, 170)">
+              <path class="tree-leaf" d="M0,0 C-10,10 -20,15 -25,5 C-15,-5 -5,-5 0,0" fill="url(#olive-leaf-grad)" />
+            </g>
+            <!-- Middle Right (240, 160) -->
+            <g class="tree-bloom leaf-group-7" transform="translate(240, 160)">
+              <path class="tree-leaf" d="M0,0 C10,10 20,15 25,5 C15,-5 5,-5 0,0" fill="url(#olive-leaf-grad)" />
+            </g>
+          </svg>
+        </div>
+        
+        <!-- Progress bar indicator -->
+        <div class="tree-progress-wrap">
+          <div class="tree-progress-bar"></div>
+        </div>
+      </div>
+      
+      <!-- Right Column: Scrolling Text Milestones -->
+      <div class="tree-scroll-col">
+        
+        <!-- Milestone 1 -->
+        <div class="tree-milestone" data-milestone="1">
+          <span class="tree-milestone-step">Aşama 01</span>
+          <h4 class="tree-milestone-title">Kökler ve Toprak</h4>
+          <p class="tree-milestone-desc">
+            Zeytin ağacının gücü, toprağın derinliklerine uzanan güçlü köklerindedir. Urla ve Saruhanlı'nın kireçli, geçirgen ve zengin toprak yapısı, Olea Stamina ağaçlarının staminasını ve karakteristik lezzetini besleyen en temel kaynaktır.
+          </p>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="tree-milestone" data-milestone="2">
+          <span class="tree-milestone-step">Aşama 02</span>
+          <h4 class="tree-milestone-title">Doğal Büyüme ve Çiçeklenme</h4>
+          <p class="tree-milestone-desc">
+            Ağaçlarımıza kimyasal gübre veya sentetik böcek ilaçları uygulamıyoruz. Baharın gelişiyle filizlenen dallarımız, tamamen biyolojik mücadele ve organik zeytin posasından elde edilen doğal kompostlar ile beslenerek sağlıklı bir şekilde uzar.
+          </p>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="tree-milestone" data-milestone="3">
+          <span class="tree-milestone-step">Aşama 03</span>
+          <h4 class="tree-milestone-title">Erken Hasat ve Meyve Verme</h4>
+          <p class="tree-milestone-desc">
+            Sonbaharın başlarında, zeytinlerimiz henüz yeşilken ve polifenol değerleri zirvedeyken özenle elle toplanır. Dallarımızın meyveye durması, doğanın en değerli hediyesi olan yüksek antioksidanlı "sıvı altın"ın habercisidir.
+          </p>
+        </div>
+
+        <!-- Milestone 4 -->
+        <div class="tree-milestone" data-milestone="4">
+          <span class="tree-milestone-step">Aşama 04</span>
+          <h4 class="tree-milestone-title">Ölümsüz Döngü</h4>
+          <p class="tree-milestone-desc">
+            Zeytin ağacı ölmez, döngüsü sonsuzdur. Doğru hasat yöntemleri ve sevgi dolu bir bakımla, Stamina gücü nesiller boyu sofralarımıza taşınmaya devam eder. Her şişe Olea Stamina, bu ölümsüz döngünün bir parçasıdır.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ Knowledge (Bilgi Deposu) ============================ -->
 <section class="section features" id="menu">
   <div class="container">

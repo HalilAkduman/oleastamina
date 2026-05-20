@@ -410,6 +410,134 @@
     });
   }
 
+  /* ---------------- Growing Olive Tree Scroll Animation ---------------- */
+  const initTreeScrollAnimation = () => {
+    const treeSection = $('.growing-tree-section');
+    if (!treeSection) return;
+
+    const trunk = treeSection.querySelector('.trunk');
+    const branchL1 = treeSection.querySelector('.branch-l1');
+    const branchR1 = treeSection.querySelector('.branch-r1');
+    const branchC = treeSection.querySelector('.branch-c');
+    const branchL2 = treeSection.querySelector('.branch-l2');
+    const branchR2 = treeSection.querySelector('.branch-r2');
+    
+    const blooms = treeSection.querySelectorAll('.tree-bloom');
+    const progressBar = treeSection.querySelector('.tree-progress-bar');
+    const milestones = treeSection.querySelectorAll('.tree-milestone');
+
+    if (!trunk || !branchL1 || !branchR1 || !branchC || !branchL2 || !branchR2) return;
+
+    let trunkLen = 180, branchL1Len = 160, branchR1Len = 160, branchCLen = 100, branchL2Len = 80, branchR2Len = 80;
+
+    // Fetch exact SVG path lengths dynamically
+    try {
+      trunkLen = trunk.getTotalLength();
+      branchL1Len = branchL1.getTotalLength();
+      branchR1Len = branchR1.getTotalLength();
+      branchCLen = branchC.getTotalLength();
+      branchL2Len = branchL2.getTotalLength();
+      branchR2Len = branchR2.getTotalLength();
+    } catch (e) {
+      console.warn("SVG getTotalLength not supported or failed:", e);
+    }
+
+    // Set initial dasharray & dashoffset for the SVG paths
+    const setPathLengths = () => {
+      trunk.style.strokeDasharray = trunkLen;
+      trunk.style.strokeDashoffset = trunkLen;
+      
+      branchL1.style.strokeDasharray = branchL1Len;
+      branchL1.style.strokeDashoffset = branchL1Len;
+      
+      branchR1.style.strokeDasharray = branchR1Len;
+      branchR1.style.strokeDashoffset = branchR1Len;
+      
+      branchC.style.strokeDasharray = branchCLen;
+      branchC.style.strokeDashoffset = branchCLen;
+      
+      branchL2.style.strokeDasharray = branchL2Len;
+      branchL2.style.strokeDashoffset = branchL2Len;
+      
+      branchR2.style.strokeDasharray = branchR2Len;
+      branchR2.style.strokeDashoffset = branchR2Len;
+    };
+    setPathLengths();
+
+    const handleScroll = () => {
+      const rect = treeSection.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Animation starts when section top is 85% down the viewport,
+      // and completes when section bottom is 15% up the viewport
+      const startPoint = windowHeight * 0.85;
+      const endPoint = windowHeight * 0.15;
+      
+      const totalScrollableHeight = rect.height - (startPoint - endPoint);
+      const scrolled = startPoint - rect.top;
+      
+      let progress = scrolled / totalScrollableHeight;
+      progress = Math.max(0, Math.min(1, progress));
+
+      // 1. Update progress bar width
+      if (progressBar) progressBar.style.width = `${progress * 100}%`;
+
+      // 2. Trunk growth (Progress: 0.0 to 0.25)
+      const trunkProgress = Math.max(0, Math.min(1, progress / 0.25));
+      trunk.style.strokeDashoffset = trunkLen - (trunkLen * trunkProgress);
+
+      // 3. Main branches growth (Progress: 0.20 to 0.55)
+      const branchProgress = Math.max(0, Math.min(1, (progress - 0.20) / 0.35));
+      branchL1.style.strokeDashoffset = branchL1Len - (branchL1Len * branchProgress);
+      branchR1.style.strokeDashoffset = branchR1Len - (branchR1Len * branchProgress);
+      branchC.style.strokeDashoffset = branchCLen - (branchCLen * branchProgress);
+
+      // 4. Sub branches growth (Progress: 0.45 to 0.75)
+      const subBranchProgress = Math.max(0, Math.min(1, (progress - 0.45) / 0.30));
+      branchL2.style.strokeDashoffset = branchL2Len - (branchL2Len * subBranchProgress);
+      branchR2.style.strokeDashoffset = branchR2Len - (branchR2Len * subBranchProgress);
+
+      // 5. Staggered leaf and fruit bloom (Progress: 0.60 to 0.95)
+      blooms.forEach((bloom, index) => {
+        const staggerDelay = index * 0.03;
+        const bloomProgress = Math.max(0, Math.min(1, (progress - 0.55 - staggerDelay) / 0.25));
+        
+        // Apply spring transform animation scale
+        bloom.style.transform = `scale(${bloomProgress})`;
+        bloom.style.opacity = bloomProgress;
+      });
+
+      // 6. Milestone text highlight state based on scroll thresholds
+      milestones.forEach((milestone, index) => {
+        const milestoneRangeStart = index * 0.25;
+        const milestoneRangeEnd = (index + 1) * 0.25;
+        
+        if (progress >= milestoneRangeStart - 0.08 && progress <= milestoneRangeEnd + 0.08) {
+          milestone.classList.add('is-active');
+        } else {
+          milestone.classList.remove('is-active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', () => {
+      // Re-read lengths on resize if needed
+      try {
+        trunkLen = trunk.getTotalLength();
+        branchL1Len = branchL1.getTotalLength();
+        branchR1Len = branchR1.getTotalLength();
+        branchCLen = branchC.getTotalLength();
+        branchL2Len = branchL2.getTotalLength();
+        branchR2Len = branchR2.getTotalLength();
+        setPathLengths();
+      } catch (e) {}
+      handleScroll();
+    });
+    handleScroll();
+  };
+  initTreeScrollAnimation();
+
   /* ---------------- Year in footer ---------------- */
   const yr = $('#year');
   if (yr) yr.textContent = new Date().getFullYear();
