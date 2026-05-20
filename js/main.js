@@ -18,13 +18,35 @@
   const toggle = $('.menu-toggle');
   const navLinks = $('.nav-links');
   if (toggle && navLinks) {
+    const openMenu = () => {
+      navLinks.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('nav-open');
+    };
+    const closeMenu = () => {
+      navLinks.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    };
+
     toggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      navLinks.classList.contains('is-open') ? closeMenu() : openMenu();
     });
+
+    // Close when clicking a nav link
     $$('.nav-links a').forEach((a) =>
-      a.addEventListener('click', () => navLinks.classList.remove('is-open'))
+      a.addEventListener('click', closeMenu)
     );
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('is-open')) closeMenu();
+    });
+
+    // Close when clicking outside nav (on the overlay background)
+    navLinks.addEventListener('click', (e) => {
+      if (e.target === navLinks) closeMenu();
+    });
   }
 
   /* ---------------- Active link ---------------- */
