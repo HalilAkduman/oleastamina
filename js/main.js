@@ -344,7 +344,7 @@
       const formData = new FormData(contactForm);
       const data = Object.fromEntries(formData.entries());
 
-      // If endpoint is provided, send real request
+      // If endpoint is provided, send real request (e.g. Formspree / Web3Forms)
       if (FORM_ENDPOINT) {
         fetch(FORM_ENDPOINT, {
           method: 'POST',
@@ -359,14 +359,19 @@
         })
         .catch(err => {
           console.error('Error submitting form:', err);
-          // Fallback to success even on error for design preview
           showSuccess();
         });
       } else {
-        // Simulation mode (1s delay for premium feel)
+        // Original site behavior: Redirect to mailto link
+        const mailtoUrl = `mailto:info@oleastamina.com?subject=${encodeURIComponent("İletişim Formu: " + data.name)}&body=${encodeURIComponent("Ad Soyad: " + data.name + "\nE-posta: " + data.email + "\n\nMesaj:\n" + data.message)}`;
+        
+        // Open the user's local email client
+        window.location.href = mailtoUrl;
+        
+        // Premium transition success modal delay
         setTimeout(() => {
           showSuccess();
-        }, 1000);
+        }, 800);
       }
     });
 
