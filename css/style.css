@@ -1056,10 +1056,8 @@ img { max-width: 100%; height: auto; }
 .tree-sticky-col {
   position: sticky;
   top: 130px;
-  height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .tree-title {

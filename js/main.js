@@ -473,7 +473,7 @@
       const startPoint = windowHeight * 0.85;
       const endPoint = windowHeight * 0.15;
       
-      const totalScrollableHeight = rect.height - (startPoint - endPoint);
+      const totalScrollableHeight = rect.height + (startPoint - endPoint);
       const scrolled = startPoint - rect.top;
       
       let progress = scrolled / totalScrollableHeight;
