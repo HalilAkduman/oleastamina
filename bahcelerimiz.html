@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bahçelerimiz — Olea Stamina</title>
+<meta name="description" content="Olea Stamina bahçeleri: Manisa Saruhanlı Pınarbaşı köyünde Domat, Uslu, Trilye; İzmir Urla Camiatik mevkiinde Gemlik çeşidi zeytinler." />
+<link rel="icon" href="images/logo.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/liquid.css" />
+</head>
+<body>
+<!-- Page-wide continuous leaf shower -->
+<div class="page-leaves" data-leaves="18" aria-hidden="true"
+     style="position:fixed; inset:0; pointer-events:none; z-index:1; overflow:hidden;"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="12" /><feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" /><feComposite in="SourceGraphic" /></filter>
+    <linearGradient id="olive-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5a7029"/><stop offset="50%" stop-color="#6b8e23"/><stop offset="100%" stop-color="#a8b878"/></linearGradient>
+    <linearGradient id="gold-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#b8924a"/><stop offset="100%" stop-color="#e0b88c"/></linearGradient>
+    <linearGradient id="oil-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e0b88c"/><stop offset="60%" stop-color="#c8956d"/><stop offset="100%" stop-color="#8b6432"/></linearGradient>
+    <symbol id="i-leaf" viewBox="0 0 60 18"><path d="M2 9 C 12 0, 28 0, 58 9 C 28 18, 12 18, 2 9 Z" fill="currentColor"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 32"><path d="M12 2 C 6 12, 2 18, 2 22 a10 10 0 0 0 20 0 C 22 18, 18 12, 12 2 Z" fill="url(#oil-grad)"/><ellipse cx="9" cy="20" rx="3" ry="4" fill="rgba(255,255,255,0.45)"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-menu"  viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 3c4 4 6 7 6 10a6 6 0 1 1-12 0c0-3 2-6 6-10z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 13v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-pin"  viewBox="0 0 24 24"><path d="M12 22s-7-8-7-13a7 7 0 1 1 14 0c0 5-7 13-7 13z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6l8-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sun"   viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></symbol>
+    <symbol id="i-water" viewBox="0 0 24 24"><path d="M12 3c5 7 7 10 7 13a7 7 0 1 1-14 0c0-3 2-6 7-13z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V7.5C13 6.6 13.4 6 14.8 6H17V2.5C16.5 2.4 15.3 2.3 14 2.3 11.4 2.3 9.7 3.9 9.7 6.9V10H7v4h2.7v8z" fill="currentColor"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M3 3l8 10L3 21h2.5l6.5-7.7 6 7.7H21l-8-10 7-9h-2.5l-6 7L8 3z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<div class="mouse-orb" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><i></i></div>
+<div class="side-rail left" aria-hidden="true"></div>
+<div class="side-rail right" aria-hidden="true"></div>
+
+<!-- Header -->
+<header class="site-header" role="banner">
+  <div class="container nav">
+    <a href="index.html" class="brand" aria-label="Olea Stamina anasayfa">
+      <img src="images/logo.png" alt="Olea Stamina" style="height:48px; width:auto;" />
+    </a>
+    <nav aria-label="Ana navigasyon">
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="index.html#about">Biz Kimiz?</a></li>
+        <li><a href="tanisalim.html">Tanışalım</a></li>
+        <li><a href="uretim-sureci.html">Üretim Süreci</a></li>
+        <li><a href="bahcelerimiz.html">Bahçelerimiz</a></li>
+        <li><a href="index.html#urunler">Ürünlerimiz</a></li>
+        <li class="nav-cta"><a href="index.html#iletisim" class="btn btn--sm" data-magnet>İletişim <svg><use href="#i-arrow"/></svg></a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Menüyü aç/kapat">
+      <svg width="28" height="28"><use href="#i-menu"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ============================ Page intro ============================ -->
+<section class="page-intro" style="min-height: 70vh; display:grid; align-items:center;">
+  <div class="liquid-bg" aria-hidden="true"></div>
+  <div class="blob blob--1" data-blob-track aria-hidden="true"></div>
+  <div class="blob blob--2" data-blob-track aria-hidden="true"></div>
+  <div class="oil-drops" data-count="14" aria-hidden="true"></div>
+  <div style="position:absolute; inset:0; pointer-events:none;" data-sparkles="12" aria-hidden="true"></div>
+  <div style="position:absolute; inset:0; pointer-events:none;" data-leaves="20" aria-hidden="true"></div>
+
+  <div class="container" style="display:grid; grid-template-columns: 1.1fr 1fr; gap: 60px; align-items:center;">
+    <div>
+      <p class="eyebrow reveal">Bahçelerimiz</p>
+      <h1 data-split><span class="accent text-flow">Saruhanlı</span> ve <span class="accent text-flow">Urla</span>,<br>iki ayrı toprağa kök saldık.</h1>
+      <p class="lead reveal delay-2" style="max-width: 56ch;">
+        Manisa Saruhanlı'nın Pınarbaşı köyünde Domat, Uslu ve Trilye; İzmir Urla'nın Camiatik mevkiinde
+        Gemlik çeşidi zeytinlerimiz bulunuyor. Her çeşit kendi karakterini koruyabilsin diye
+        monovaryetal olarak sıkılıyor.
+      </p>
+      <div class="hero-cta reveal delay-3">
+        <a href="#parseller" class="btn btn--pulse" data-magnet>Parsellerimiz <svg><use href="#i-arrow"/></svg></a>
+        <a href="uretim-sureci.html" class="btn btn--ghost">Üretim Süreci</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat kpi reveal delay-3"><span class="stat-value"><span data-count="2">0</span></span><span class="stat-label">Konum</span></div>
+        <div class="stat kpi reveal delay-3"><span class="stat-value"><span data-count="4">0</span></span><span class="stat-label">Zeytin çeşidi</span></div>
+        <div class="stat kpi reveal delay-3"><span class="stat-value">%<span data-count="0">0</span></span><span class="stat-label">Kimyasal kullanımı</span></div>
+      </div>
+    </div>
+
+    <div class="reveal delay-2 mask-reveal glow-pulse" data-tilt="6" style="border-radius:32px; overflow:hidden; aspect-ratio: 1/1; position:relative;">
+      <img src="images/bahcelerimiz-1.png" alt="Bahçelerimiz Saruhanlı" style="width:100%; height:100%; object-fit:cover;" />
+      <div style="position:absolute; inset:0; pointer-events:none;" data-bubbles="6" aria-hidden="true"></div>
+      <div class="glass" style="position:absolute; top:16px; left:16px; padding:12px 18px; display:flex; align-items:center; gap:10px;">
+        <svg width="20" height="20" style="color: var(--olive-700);"><use href="#i-pin"/></svg>
+        <div>
+          <strong style="color: var(--olive-900); display:block; font-size:0.95rem;">Saruhanlı</strong>
+          <small style="color: var(--text-soft);">Pınarbaşı · Manisa</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Big olive-branch divider (left + right) -->
+<div class="big-branches" aria-hidden="true">
+    <svg class="branch-l" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid meet">
+      <defs>
+        <linearGradient id="bg-l-top" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#8aa642"/>
+          <stop offset="55%" stop-color="#5a7029"/>
+          <stop offset="100%" stop-color="#3d4f2b"/>
+        </linearGradient>
+        <linearGradient id="bg-l-bot" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#6b8e23"/>
+          <stop offset="60%" stop-color="#4a5d23"/>
+          <stop offset="100%" stop-color="#2d3a21"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Main woody stem (curved) -->
+      <path d="M -10 110 C 120 100, 250 124, 370 102 S 580 110, 712 108"
+            stroke="#3d4f2b" stroke-width="3" fill="none" opacity="0.9"/>
+
+      <!-- Side branches springing off the main stem -->
+      <path d="M 110 108 C 140 78, 175 56, 215 48" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 230 114 C 260 142, 305 168, 350 175" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 390 100 C 425 70, 470 50, 510 46" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 520 106 C 560 132, 600 158, 645 168" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+
+      <!-- Leaf cluster 1 (base) -->
+      <g class="leaf-cluster">
+        <ellipse cx="80" cy="96"  rx="38" ry="11"  fill="url(#bg-l-top)" transform="rotate(-32 80 96)"  opacity="0.95"/>
+        <ellipse cx="80" cy="124" rx="34" ry="10"  fill="url(#bg-l-bot)" transform="rotate(28 80 124)" opacity="0.88"/>
+      </g>
+
+      <!-- Side branch tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="215" cy="48"  rx="32" ry="9"   fill="url(#bg-l-top)" transform="rotate(-18 215 48)" opacity="0.95"/>
+        <ellipse cx="200" cy="60"  rx="28" ry="8.5" fill="url(#bg-l-bot)" transform="rotate(46 200 60)"  opacity="0.85"/>
+        <circle cx="232" cy="55" r="5" fill="#2d3a21" class="berry"/>
+        <circle cx="231" cy="53.5" r="1.6" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 2 -->
+      <g class="leaf-cluster">
+        <ellipse cx="225" cy="100" rx="42" ry="12"   fill="url(#bg-l-top)" transform="rotate(-28 225 100)" opacity="0.95"/>
+        <ellipse cx="225" cy="128" rx="37" ry="11"   fill="url(#bg-l-bot)" transform="rotate(30 225 128)"  opacity="0.88"/>
+      </g>
+
+      <!-- Lower-side tip with olives -->
+      <g class="leaf-cluster">
+        <ellipse cx="350" cy="175" rx="30" ry="9"   fill="url(#bg-l-bot)" transform="rotate(38 350 175)" opacity="0.85"/>
+        <ellipse cx="345" cy="155" rx="26" ry="8"   fill="url(#bg-l-top)" transform="rotate(-18 345 155)" opacity="0.82"/>
+        <circle cx="330" cy="168" r="6.5" fill="#2d3a21" class="berry"/>
+        <circle cx="329" cy="166" r="2" fill="rgba(255,255,255,0.5)"/>
+      </g>
+
+      <!-- Cluster 3 -->
+      <g class="leaf-cluster">
+        <ellipse cx="365" cy="92"  rx="40" ry="11.5" fill="url(#bg-l-top)" transform="rotate(-30 365 92)"  opacity="0.95"/>
+        <ellipse cx="365" cy="120" rx="35" ry="10.5" fill="url(#bg-l-bot)" transform="rotate(32 365 120)" opacity="0.88"/>
+      </g>
+
+      <!-- Upper-side tip with olives -->
+      <g class="leaf-cluster">
+        <ellipse cx="510" cy="46"  rx="34" ry="9.5" fill="url(#bg-l-top)" transform="rotate(-15 510 46)" opacity="0.95"/>
+        <ellipse cx="495" cy="60"  rx="30" ry="9"   fill="url(#bg-l-bot)" transform="rotate(48 495 60)"  opacity="0.85"/>
+        <circle cx="528" cy="56" r="5.5" fill="#2d3a21" class="berry"/>
+        <circle cx="527" cy="54" r="1.8" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 4 -->
+      <g class="leaf-cluster">
+        <ellipse cx="510" cy="102" rx="38" ry="11"   fill="url(#bg-l-top)" transform="rotate(-26 510 102)" opacity="0.95"/>
+        <ellipse cx="510" cy="128" rx="33" ry="10"   fill="url(#bg-l-bot)" transform="rotate(30 510 128)" opacity="0.88"/>
+      </g>
+
+      <!-- Lower tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="645" cy="168" rx="28" ry="8.5" fill="url(#bg-l-bot)" transform="rotate(32 645 168)" opacity="0.85"/>
+        <ellipse cx="640" cy="150" rx="24" ry="7.5" fill="url(#bg-l-top)" transform="rotate(-22 640 150)" opacity="0.82"/>
+        <circle cx="625" cy="162" r="6" fill="#2d3a21" class="berry"/>
+        <circle cx="624" cy="160" r="1.7" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 5 (toward end of main stem) -->
+      <g class="leaf-cluster">
+        <ellipse cx="640" cy="98"  rx="34" ry="10"   fill="url(#bg-l-top)" transform="rotate(-24 640 98)"  opacity="0.95"/>
+        <ellipse cx="640" cy="122" rx="30" ry="9"    fill="url(#bg-l-bot)" transform="rotate(28 640 122)" opacity="0.88"/>
+      </g>
+
+      <!-- Final tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="700" cy="95"  rx="24" ry="8"    fill="url(#bg-l-top)" transform="rotate(-12 700 95)" opacity="0.95"/>
+        <ellipse cx="700" cy="118" rx="22" ry="7"    fill="url(#bg-l-bot)" transform="rotate(15 700 118)" opacity="0.85"/>
+      </g>
+    </svg>
+    <svg class="branch-r" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid meet">
+      <defs>
+        <linearGradient id="bg-r-top" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#8aa642"/>
+          <stop offset="55%" stop-color="#5a7029"/>
+          <stop offset="100%" stop-color="#3d4f2b"/>
+        </linearGradient>
+        <linearGradient id="bg-r-bot" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#6b8e23"/>
+          <stop offset="60%" stop-color="#4a5d23"/>
+          <stop offset="100%" stop-color="#2d3a21"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Main woody stem (curved) -->
+      <path d="M -10 110 C 120 100, 250 124, 370 102 S 580 110, 712 108"
+            stroke="#3d4f2b" stroke-width="3" fill="none" opacity="0.9"/>
+
+      <!-- Side branches springing off the main stem -->
+      <path d="M 110 108 C 140 78, 175 56, 215 48" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 230 114 C 260 142, 305 168, 350 175" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 390 100 C 425 70, 470 50, 510 46" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 520 106 C 560 132, 600 158, 645 168" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+
+      <!-- Leaf cluster 1 (base) -->
+      <g class="leaf-cluster">
+        <ellipse cx="80" cy="96"  rx="38" ry="11"  fill="url(#bg-r-top)" transform="rotate(-32 80 96)"  opacity="0.95"/>
+        <ellipse cx="80" cy="124" rx="34" ry="10"  fill="url(#bg-r-bot)" transform="rotate(28 80 124)" opacity="0.88"/>
+      </g>
+
+      <!-- Side branch tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="215" cy="48"  rx="32" ry="9"   fill="url(#bg-r-top)" transform="rotate(-18 215 48)" opacity="0.95"/>
+        <ellipse cx="200" cy="60"  rx="28" ry="8.5" fill="url(#bg-r-bot)" transform="rotate(46 200 60)"  opacity="0.85"/>
+        <circle cx="232" cy="55" r="5" fill="#2d3a21" class="berry"/>
+        <circle cx="231" cy="53.5" r="1.6" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 2 -->
+      <g class="leaf-cluster">
+        <ellipse cx="225" cy="100" rx="42" ry="12"   fill="url(#bg-r-top)" transform="rotate(-28 225 100)" opacity="0.95"/>
+        <ellipse cx="225" cy="128" rx="37" ry="11"   fill="url(#bg-r-bot)" transform="rotate(30 225 128)"  opacity="0.88"/>
+      </g>
+
+      <!-- Lower-side tip with olives -->
+      <g class="leaf-cluster">
+        <ellipse cx="350" cy="175" rx="30" ry="9"   fill="url(#bg-r-bot)" transform="rotate(38 350 175)" opacity="0.85"/>
+        <ellipse cx="345" cy="155" rx="26" ry="8"   fill="url(#bg-r-top)" transform="rotate(-18 345 155)" opacity="0.82"/>
+        <circle cx="330" cy="168" r="6.5" fill="#2d3a21" class="berry"/>
+        <circle cx="329" cy="166" r="2" fill="rgba(255,255,255,0.5)"/>
+      </g>
+
+      <!-- Cluster 3 -->
+      <g class="leaf-cluster">
+        <ellipse cx="365" cy="92"  rx="40" ry="11.5" fill="url(#bg-r-top)" transform="rotate(-30 365 92)"  opacity="0.95"/>
+        <ellipse cx="365" cy="120" rx="35" ry="10.5" fill="url(#bg-r-bot)" transform="rotate(32 365 120)" opacity="0.88"/>
+      </g>
+
+      <!-- Upper-side tip with olives -->
+      <g class="leaf-cluster">
+        <ellipse cx="510" cy="46"  rx="34" ry="9.5" fill="url(#bg-r-top)" transform="rotate(-15 510 46)" opacity="0.95"/>
+        <ellipse cx="495" cy="60"  rx="30" ry="9"   fill="url(#bg-r-bot)" transform="rotate(48 495 60)"  opacity="0.85"/>
+        <circle cx="528" cy="56" r="5.5" fill="#2d3a21" class="berry"/>
+        <circle cx="527" cy="54" r="1.8" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 4 -->
+      <g class="leaf-cluster">
+        <ellipse cx="510" cy="102" rx="38" ry="11"   fill="url(#bg-r-top)" transform="rotate(-26 510 102)" opacity="0.95"/>
+        <ellipse cx="510" cy="128" rx="33" ry="10"   fill="url(#bg-r-bot)" transform="rotate(30 510 128)" opacity="0.88"/>
+      </g>
+
+      <!-- Lower tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="645" cy="168" rx="28" ry="8.5" fill="url(#bg-r-bot)" transform="rotate(32 645 168)" opacity="0.85"/>
+        <ellipse cx="640" cy="150" rx="24" ry="7.5" fill="url(#bg-r-top)" transform="rotate(-22 640 150)" opacity="0.82"/>
+        <circle cx="625" cy="162" r="6" fill="#2d3a21" class="berry"/>
+        <circle cx="624" cy="160" r="1.7" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 5 (toward end of main stem) -->
+      <g class="leaf-cluster">
+        <ellipse cx="640" cy="98"  rx="34" ry="10"   fill="url(#bg-r-top)" transform="rotate(-24 640 98)"  opacity="0.95"/>
+        <ellipse cx="640" cy="122" rx="30" ry="9"    fill="url(#bg-r-bot)" transform="rotate(28 640 122)" opacity="0.88"/>
+      </g>
+
+      <!-- Final tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="700" cy="95"  rx="24" ry="8"    fill="url(#bg-r-top)" transform="rotate(-12 700 95)" opacity="0.95"/>
+        <ellipse cx="700" cy="118" rx="22" ry="7"    fill="url(#bg-r-bot)" transform="rotate(15 700 118)" opacity="0.85"/>
+      </g>
+    </svg>
+</div>
+
+<!-- ============================ Two locations ============================ -->
+<section class="section" id="parseller" style="background: var(--cream-50); position:relative; overflow:hidden;">
+  <div class="corner-blob" style="top:-100px; left:-120px; background: radial-gradient(circle, var(--olive-300), transparent 70%);" aria-hidden="true"></div>
+  <div class="corner-blob" style="bottom:-100px; right:-120px; background: radial-gradient(circle, var(--gold-300), transparent 70%); animation-delay:-7s;" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="text-center reveal" style="max-width: 720px; margin-inline:auto;">
+      <p class="eyebrow" style="justify-content:center;">İki Bölge</p>
+      <h2>Aynı <span class="text-flow">disiplin</span>, farklı topraklar.</h2>
+      <p class="lead mx-auto">Manisa ve İzmir'deki bahçelerimizde toplam dört çeşit zeytin yetiştiriyoruz.</p>
+    </div>
+
+    <div class="grid-2 mt-xl">
+      <article class="reveal">
+        <div class="card shine glow-border" style="padding: 0; overflow: hidden;">
+          <div class="reveal mask-reveal" data-tilt="4" style="aspect-ratio: 16/10; overflow:hidden; position:relative;">
+            <img src="images/bahcelerimiz-1.png" alt="Saruhanlı bahçesi" style="width:100%; height:100%; object-fit:cover;" />
+            <div style="position:absolute; inset:0; pointer-events:none;" data-bubbles="6" aria-hidden="true"></div>
+          </div>
+          <div style="padding: 32px;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom: 12px;">
+              <svg width="20" height="20" style="color: var(--olive-700);"><use href="#i-pin"/></svg>
+              <strong style="color: var(--olive-900); letter-spacing:0.04em;">Manisa · Saruhanlı · Pınarbaşı</strong>
+            </div>
+            <h3>Üç çeşit, tek köy</h3>
+            <p>Pınarbaşı köyündeki arazimizde üç farklı çeşit yan yana yetişir: Domat, Uslu ve Trilye. Her birinin hasat zamanı ve aroma profili kendine özgüdür; bu yüzden ayrı ayrı sıkılırlar.</p>
+            <ul class="spec-list" style="grid-template-columns: 1fr; margin-top: 18px;">
+              <li><strong>Domat:</strong> Etli, yumuşak, hafif meyvemsi</li>
+              <li><strong>Uslu:</strong> Dengeli, tipik Ege karakteri</li>
+              <li><strong>Trilye:</strong> Belirgin yapı, dolgun damak</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="reveal delay-1">
+        <div class="card shine glow-border" style="padding: 0; overflow: hidden;">
+          <div class="reveal mask-reveal" data-tilt="4" style="aspect-ratio: 16/10; overflow:hidden; position:relative;">
+            <img src="images/bahcelerimiz-2.png" alt="Urla bahçesi" style="width:100%; height:100%; object-fit:cover;" />
+            <div style="position:absolute; inset:0; pointer-events:none;" data-bubbles="6" aria-hidden="true"></div>
+          </div>
+          <div style="padding: 32px;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom: 12px;">
+              <svg width="20" height="20" style="color: var(--olive-700);"><use href="#i-pin"/></svg>
+              <strong style="color: var(--olive-900); letter-spacing:0.04em;">İzmir · Urla · Camiatik</strong>
+            </div>
+            <h3>Gemlik, Urla'da</h3>
+            <p>Camiatik arazimizde Gemlik çeşidi zeytinlerimiz var. Klasik karakteri ve dengeli profili ile koleksiyonumuzun tamamlayıcısı.</p>
+            <ul class="spec-list" style="grid-template-columns: 1fr; margin-top: 18px;">
+              <li><strong>Gemlik:</strong> Klasik, dengeli aroma</li>
+              <li><strong>Hasat:</strong> Geleneksel takvime uygun</li>
+              <li><strong>Sıkım:</strong> Monovaryetal, soğuk sıkım</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee marquee--dark" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Domat <span class="dot"></span></span>
+    <span class="marquee-item">Uslu <span class="dot"></span></span>
+    <span class="marquee-item">Trilye <span class="dot"></span></span>
+    <span class="marquee-item">Gemlik <span class="dot"></span></span>
+    <span class="marquee-item">Saruhanlı <span class="dot"></span></span>
+    <span class="marquee-item">Urla <span class="dot"></span></span>
+    <span class="marquee-item">Domat <span class="dot"></span></span>
+    <span class="marquee-item">Uslu <span class="dot"></span></span>
+    <span class="marquee-item">Trilye <span class="dot"></span></span>
+    <span class="marquee-item">Gemlik <span class="dot"></span></span>
+    <span class="marquee-item">Saruhanlı <span class="dot"></span></span>
+    <span class="marquee-item">Urla <span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- ============================ Approach (no chemicals) ============================ -->
+<section class="section">
+  <div class="container">
+    <div class="text-center reveal" style="max-width: 720px; margin-inline:auto;">
+      <p class="eyebrow" style="justify-content:center;">Yaklaşımımız</p>
+      <h2>Doğanın bize verdiği <span class="text-flow">şifa kaynağına</span> zarar vermeden.</h2>
+      <p class="lead mx-auto">Zeytinliklerimizde oluşan zararlılara karşı kimyasal etken maddesi olan hiçbir ürün kullanmıyor; biyolojik mücadele ve doğal gübre ile ağaçlarımızın güçlenmesini sağlıyoruz.</p>
+    </div>
+
+    <div class="grid-4 mt-xl">
+      <article class="card shine glow-border reveal">
+        <span class="card-icon"><svg><use href="#i-shield"/></svg></span>
+        <h4>Kimyasal yok</h4>
+        <p style="margin-top:8px;">Bahçelerimizde kimyasal etken madde içeren hiçbir ürün kullanılmaz.</p>
+      </article>
+      <article class="card shine glow-border reveal delay-1">
+        <span class="card-icon"><svg><use href="#i-tree"/></svg></span>
+        <h4>Biyolojik mücadele</h4>
+        <p style="margin-top:8px;">Zararlılarla doğal yöntemlerle mücadele ediyor, ekosistemi koruyoruz.</p>
+      </article>
+      <article class="card shine glow-border reveal delay-2">
+        <span class="card-icon"><svg><use href="#i-water"/></svg></span>
+        <h4>Doğal gübre</h4>
+        <p style="margin-top:8px;">Toprağın canlı kalması için doğal kaynaklı gübreyi tercih ediyoruz.</p>
+      </article>
+      <article class="card shine glow-border reveal delay-3">
+        <span class="card-icon"><svg><use href="#i-sun"/></svg></span>
+        <h4>Monovaryetal sıkım</h4>
+        <p style="margin-top:8px;">Her çeşit kendi karakteriyle, ayrı ayrı sıkılır ve şişelenir.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Big olive-branch divider (left + right) -->
+<div class="big-branches" aria-hidden="true">
+    <svg class="branch-l" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid meet">
+      <defs>
+        <linearGradient id="bg-l-top" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#8aa642"/>
+          <stop offset="55%" stop-color="#5a7029"/>
+          <stop offset="100%" stop-color="#3d4f2b"/>
+        </linearGradient>
+        <linearGradient id="bg-l-bot" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#6b8e23"/>
+          <stop offset="60%" stop-color="#4a5d23"/>
+          <stop offset="100%" stop-color="#2d3a21"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Main woody stem (curved) -->
+      <path d="M -10 110 C 120 100, 250 124, 370 102 S 580 110, 712 108"
+            stroke="#3d4f2b" stroke-width="3" fill="none" opacity="0.9"/>
+
+      <!-- Side branches springing off the main stem -->
+      <path d="M 110 108 C 140 78, 175 56, 215 48" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 230 114 C 260 142, 305 168, 350 175" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 390 100 C 425 70, 470 50, 510 46" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 520 106 C 560 132, 600 158, 645 168" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+
+      <!-- Leaf cluster 1 (base) -->
+      <g class="leaf-cluster">
+        <ellipse cx="80" cy="96"  rx="38" ry="11"  fill="url(#bg-l-top)" transform="rotate(-32 80 96)"  opacity="0.95"/>
+        <ellipse cx="80" cy="124" rx="34" ry="10"  fill="url(#bg-l-bot)" transform="rotate(28 80 124)" opacity="0.88"/>
+      </g>
+
+      <!-- Side branch tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="215" cy="48"  rx="32" ry="9"   fill="url(#bg-l-top)" transform="rotate(-18 215 48)" opacity="0.95"/>
+        <ellipse cx="200" cy="60"  rx="28" ry="8.5" fill="url(#bg-l-bot)" transform="rotate(46 200 60)"  opacity="0.85"/>
+        <circle cx="232" cy="55" r="5" fill="#2d3a21" class="berry"/>
+        <circle cx="231" cy="53.5" r="1.6" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 2 -->
+      <g class="leaf-cluster">
+        <ellipse cx="225" cy="100" rx="42" ry="12"   fill="url(#bg-l-top)" transform="rotate(-28 225 100)" opacity="0.95"/>
+        <ellipse cx="225" cy="128" rx="37" ry="11"   fill="url(#bg-l-bot)" transform="rotate(30 225 128)"  opacity="0.88"/>
+      </g>
+
+      <!-- Lower-side tip with olives -->
+      <g class="leaf-cluster">
+        <ellipse cx="350" cy="175" rx="30" ry="9"   fill="url(#bg-l-bot)" transform="rotate(38 350 175)" opacity="0.85"/>
+        <ellipse cx="345" cy="155" rx="26" ry="8"   fill="url(#bg-l-top)" transform="rotate(-18 345 155)" opacity="0.82"/>
+        <circle cx="330" cy="168" r="6.5" fill="#2d3a21" class="berry"/>
+        <circle cx="329" cy="166" r="2" fill="rgba(255,255,255,0.5)"/>
+      </g>
+
+      <!-- Cluster 3 -->
+      <g class="leaf-cluster">
+        <ellipse cx="365" cy="92"  rx="40" ry="11.5" fill="url(#bg-l-top)" transform="rotate(-30 365 92)"  opacity="0.95"/>
+        <ellipse cx="365" cy="120" rx="35" ry="10.5" fill="url(#bg-l-bot)" transform="rotate(32 365 120)" opacity="0.88"/>
+      </g>
+
+      <!-- Upper-side tip with olives -->
+      <g class="leaf-cluster">
+        <ellipse cx="510" cy="46"  rx="34" ry="9.5" fill="url(#bg-l-top)" transform="rotate(-15 510 46)" opacity="0.95"/>
+        <ellipse cx="495" cy="60"  rx="30" ry="9"   fill="url(#bg-l-bot)" transform="rotate(48 495 60)"  opacity="0.85"/>
+        <circle cx="528" cy="56" r="5.5" fill="#2d3a21" class="berry"/>
+        <circle cx="527" cy="54" r="1.8" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 4 -->
+      <g class="leaf-cluster">
+        <ellipse cx="510" cy="102" rx="38" ry="11"   fill="url(#bg-l-top)" transform="rotate(-26 510 102)" opacity="0.95"/>
+        <ellipse cx="510" cy="128" rx="33" ry="10"   fill="url(#bg-l-bot)" transform="rotate(30 510 128)" opacity="0.88"/>
+      </g>
+
+      <!-- Lower tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="645" cy="168" rx="28" ry="8.5" fill="url(#bg-l-bot)" transform="rotate(32 645 168)" opacity="0.85"/>
+        <ellipse cx="640" cy="150" rx="24" ry="7.5" fill="url(#bg-l-top)" transform="rotate(-22 640 150)" opacity="0.82"/>
+        <circle cx="625" cy="162" r="6" fill="#2d3a21" class="berry"/>
+        <circle cx="624" cy="160" r="1.7" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 5 (toward end of main stem) -->
+      <g class="leaf-cluster">
+        <ellipse cx="640" cy="98"  rx="34" ry="10"   fill="url(#bg-l-top)" transform="rotate(-24 640 98)"  opacity="0.95"/>
+        <ellipse cx="640" cy="122" rx="30" ry="9"    fill="url(#bg-l-bot)" transform="rotate(28 640 122)" opacity="0.88"/>
+      </g>
+
+      <!-- Final tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="700" cy="95"  rx="24" ry="8"    fill="url(#bg-l-top)" transform="rotate(-12 700 95)" opacity="0.95"/>
+        <ellipse cx="700" cy="118" rx="22" ry="7"    fill="url(#bg-l-bot)" transform="rotate(15 700 118)" opacity="0.85"/>
+      </g>
+    </svg>
+    <svg class="branch-r" viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid meet">
+      <defs>
+        <linearGradient id="bg-r-top" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#8aa642"/>
+          <stop offset="55%" stop-color="#5a7029"/>
+          <stop offset="100%" stop-color="#3d4f2b"/>
+        </linearGradient>
+        <linearGradient id="bg-r-bot" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#6b8e23"/>
+          <stop offset="60%" stop-color="#4a5d23"/>
+          <stop offset="100%" stop-color="#2d3a21"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Main woody stem (curved) -->
+      <path d="M -10 110 C 120 100, 250 124, 370 102 S 580 110, 712 108"
+            stroke="#3d4f2b" stroke-width="3" fill="none" opacity="0.9"/>
+
+      <!-- Side branches springing off the main stem -->
+      <path d="M 110 108 C 140 78, 175 56, 215 48" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 230 114 C 260 142, 305 168, 350 175" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 390 100 C 425 70, 470 50, 510 46" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+      <path d="M 520 106 C 560 132, 600 158, 645 168" stroke="#3d4f2b" stroke-width="1.7" fill="none" opacity="0.78"/>
+
+      <!-- Leaf cluster 1 (base) -->
+      <g class="leaf-cluster">
+        <ellipse cx="80" cy="96"  rx="38" ry="11"  fill="url(#bg-r-top)" transform="rotate(-32 80 96)"  opacity="0.95"/>
+        <ellipse cx="80" cy="124" rx="34" ry="10"  fill="url(#bg-r-bot)" transform="rotate(28 80 124)" opacity="0.88"/>
+      </g>
+
+      <!-- Side branch tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="215" cy="48"  rx="32" ry="9"   fill="url(#bg-r-top)" transform="rotate(-18 215 48)" opacity="0.95"/>
+        <ellipse cx="200" cy="60"  rx="28" ry="8.5" fill="url(#bg-r-bot)" transform="rotate(46 200 60)"  opacity="0.85"/>
+        <circle cx="232" cy="55" r="5" fill="#2d3a21" class="berry"/>
+        <circle cx="231" cy="53.5" r="1.6" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 2 -->
+      <g class="leaf-cluster">
+        <ellipse cx="225" cy="100" rx="42" ry="12"   fill="url(#bg-r-top)" transform="rotate(-28 225 100)" opacity="0.95"/>
+        <ellipse cx="225" cy="128" rx="37" ry="11"   fill="url(#bg-r-bot)" transform="rotate(30 225 128)"  opacity="0.88"/>
+      </g>
+
+      <!-- Lower-side tip with olives -->
+      <g class="leaf-cluster">
+        <ellipse cx="350" cy="175" rx="30" ry="9"   fill="url(#bg-r-bot)" transform="rotate(38 350 175)" opacity="0.85"/>
+        <ellipse cx="345" cy="155" rx="26" ry="8"   fill="url(#bg-r-top)" transform="rotate(-18 345 155)" opacity="0.82"/>
+        <circle cx="330" cy="168" r="6.5" fill="#2d3a21" class="berry"/>
+        <circle cx="329" cy="166" r="2" fill="rgba(255,255,255,0.5)"/>
+      </g>
+
+      <!-- Cluster 3 -->
+      <g class="leaf-cluster">
+        <ellipse cx="365" cy="92"  rx="40" ry="11.5" fill="url(#bg-r-top)" transform="rotate(-30 365 92)"  opacity="0.95"/>
+        <ellipse cx="365" cy="120" rx="35" ry="10.5" fill="url(#bg-r-bot)" transform="rotate(32 365 120)" opacity="0.88"/>
+      </g>
+
+      <!-- Upper-side tip with olives -->
+      <g class="leaf-cluster">
+        <ellipse cx="510" cy="46"  rx="34" ry="9.5" fill="url(#bg-r-top)" transform="rotate(-15 510 46)" opacity="0.95"/>
+        <ellipse cx="495" cy="60"  rx="30" ry="9"   fill="url(#bg-r-bot)" transform="rotate(48 495 60)"  opacity="0.85"/>
+        <circle cx="528" cy="56" r="5.5" fill="#2d3a21" class="berry"/>
+        <circle cx="527" cy="54" r="1.8" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 4 -->
+      <g class="leaf-cluster">
+        <ellipse cx="510" cy="102" rx="38" ry="11"   fill="url(#bg-r-top)" transform="rotate(-26 510 102)" opacity="0.95"/>
+        <ellipse cx="510" cy="128" rx="33" ry="10"   fill="url(#bg-r-bot)" transform="rotate(30 510 128)" opacity="0.88"/>
+      </g>
+
+      <!-- Lower tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="645" cy="168" rx="28" ry="8.5" fill="url(#bg-r-bot)" transform="rotate(32 645 168)" opacity="0.85"/>
+        <ellipse cx="640" cy="150" rx="24" ry="7.5" fill="url(#bg-r-top)" transform="rotate(-22 640 150)" opacity="0.82"/>
+        <circle cx="625" cy="162" r="6" fill="#2d3a21" class="berry"/>
+        <circle cx="624" cy="160" r="1.7" fill="rgba(255,255,255,0.45)"/>
+      </g>
+
+      <!-- Cluster 5 (toward end of main stem) -->
+      <g class="leaf-cluster">
+        <ellipse cx="640" cy="98"  rx="34" ry="10"   fill="url(#bg-r-top)" transform="rotate(-24 640 98)"  opacity="0.95"/>
+        <ellipse cx="640" cy="122" rx="30" ry="9"    fill="url(#bg-r-bot)" transform="rotate(28 640 122)" opacity="0.88"/>
+      </g>
+
+      <!-- Final tip cluster -->
+      <g class="leaf-cluster">
+        <ellipse cx="700" cy="95"  rx="24" ry="8"    fill="url(#bg-r-top)" transform="rotate(-12 700 95)" opacity="0.95"/>
+        <ellipse cx="700" cy="118" rx="22" ry="7"    fill="url(#bg-r-bot)" transform="rotate(15 700 118)" opacity="0.85"/>
+      </g>
+    </svg>
+</div>
+
+<!-- ============================ CTA ============================ -->
+<section class="section--tight">
+  <div class="container">
+    <div class="cta-banner reveal" style="position:relative; overflow:hidden;">
+      <div style="position:relative; z-index:1;">
+        <p class="eyebrow">Bağlantı kuralım</p>
+        <h2 style="margin-bottom:16px;">Sipariş veya kurumsal hediye için.</h2>
+        <p class="lead">Manisa ve İzmir bahçelerimizden, sınırlı sayıda üretilen şişelerimiz için bizimle iletişime geçin.</p>
+      </div>
+      <div style="display:flex; gap:12px; position:relative; z-index:1; flex-wrap:wrap;">
+        <a href="index.html#iletisim" class="btn btn--pulse" data-magnet>İletişim <svg><use href="#i-arrow"/></svg></a>
+        <a href="index.html#urunler" class="btn btn--ghost">Ürünler</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer" role="contentinfo">
+
+  <!-- Layered animated sea waves at the top of the footer -->
+  <div class="footer-sea" aria-hidden="true">
+    <svg viewBox="0 0 2880 150" preserveAspectRatio="none">
+      <path d="M0,75 q288,-55 576,0 t576,0 t576,0 t576,0 t576,0 L2880,150 L0,150 Z"/>
+    </svg>
+    <svg viewBox="0 0 2880 150" preserveAspectRatio="none">
+      <path d="M0,55 q240,-40 480,0 t480,0 t480,0 t480,0 t480,0 t480,0 L2880,150 L0,150 Z"/>
+    </svg>
+    <svg viewBox="0 0 2880 150" preserveAspectRatio="none">
+      <path d="M0,90 q360,-55 720,0 t720,0 t720,0 t720,0 L2880,150 L0,150 Z"/>
+    </svg>
+  </div>
+
+  <!-- Newsletter -->
+  <section class="footer-newsletter" aria-label="Bülten">
+    <div class="container newsletter-inner">
+      <div>
+        <p class="eyebrow">Sezonluk Bülten</p>
+        <h3>Yeni hasatları kaçırmayın.</h3>
+        <p class="newsletter-lead">Hasat dönemleri, sınırlı partiler ve özel etkinliklerden ilk siz haberdar olun.</p>
+      </div>
+      <form class="newsletter-form"
+            onsubmit="event.preventDefault(); this.querySelector('button').innerText='Teşekkürler ✓';">
+        <input type="email" required placeholder="e-posta adresiniz" aria-label="E-posta adresiniz" />
+        <button class="btn" type="submit" data-magnet>Katıl <svg><use href="#i-arrow"/></svg></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Main grid -->
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="brand" aria-label="Olea Stamina anasayfa">
+        <img src="images/logo.png" alt="Olea Stamina" class="footer-logo" />
+      </a>
+      <p>Dalından sofranıza %100 organik, erken hasat soğuk sıkım natürel sızma zeytinyağı.</p>
+      <ul class="social-list" aria-label="Sosyal medya">
+        <li><a href="#" aria-label="Instagram"><svg width="18" height="18"><use href="#i-instagram"/></svg></a></li>
+        <li><a href="#" aria-label="Facebook"><svg width="18" height="18"><use href="#i-facebook"/></svg></a></li>
+        <li><a href="#" aria-label="X"><svg width="18" height="18"><use href="#i-x"/></svg></a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Hakkımızda</h4>
+      <ul>
+        <li><a href="tanisalim.html">Tanışalım</a></li>
+        <li><a href="uretim-sureci.html">Üretim Süreci</a></li>
+        <li><a href="bahcelerimiz.html">Bahçelerimiz</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Keşfet</h4>
+      <ul>
+        <li><a href="index.html#about">Biz Kimiz?</a></li>
+        <li><a href="index.html#menu">Bilgi Deposu</a></li>
+        <li><a href="index.html#urunler">Ürünlerimiz</a></li>
+        <li><a href="index.html#review">Galeri</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>İletişim</h4>
+      <ul>
+        <li><strong>Bahçeler</strong>Manisa Saruhanlı<br>İzmir Urla</li>
+        <li><a href="mailto:info@oleastamina.com">info@oleastamina.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> Olea Stamina — Tüm hakları saklıdır.</span>
+    <span class="footer-meta">Erken Hasat · Soğuk Sıkım · Natürel Sızma</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/liquid.js"></script>
+</body>
+</html>
