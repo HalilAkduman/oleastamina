@@ -608,11 +608,6 @@
         <div class="tree-svg-container">
           <svg class="growing-tree-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="tree-wood" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="#4e3b2b"/>
-                <stop offset="50%" stop-color="#735c47"/>
-                <stop offset="100%" stop-color="#4e3b2b"/>
-              </linearGradient>
               <linearGradient id="olive-leaf-grad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stop-color="#8aa642"/>
                 <stop offset="100%" stop-color="#3d4f2b"/>
@@ -620,71 +615,134 @@
             </defs>
 
             <!-- Trunk -->
-            <path class="tree-path trunk" d="M 200,380 C 195,320 205,260 200,200" 
-                  stroke="url(#tree-wood)" stroke-width="12" stroke-linecap="round" fill="none" />
+            <path class="tree-path trunk" d="M 200,380 C 195,310 205,250 200,210" 
+                  stroke="#523f2f" stroke-width="14" stroke-linecap="round" fill="none" />
             
-            <!-- Left Branch -->
-            <path class="tree-path branch branch-l1" d="M 200,260 C 180,220 150,180 120,150" 
-                  stroke="url(#tree-wood)" stroke-width="8" stroke-linecap="round" fill="none" />
+            <!-- Primary Branches -->
+            <path class="tree-path branch-p" d="M 200,230 C 180,200 150,180 120,160" 
+                  stroke="#523f2f" stroke-width="9" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-p" d="M 200,220 C 220,190 250,170 280,150" 
+                  stroke="#523f2f" stroke-width="9" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-p" d="M 200,210 C 190,170 210,140 200,120" 
+                  stroke="#523f2f" stroke-width="9" stroke-linecap="round" fill="none" />
             
-            <!-- Right Branch -->
-            <path class="tree-path branch branch-r1" d="M 200,240 C 220,200 250,170 280,140" 
-                  stroke="url(#tree-wood)" stroke-width="8" stroke-linecap="round" fill="none" />
+            <!-- Secondary Branches -->
+            <path class="tree-path branch-s" d="M 120,160 C 95,150 75,130 60,110" 
+                  stroke="#523f2f" stroke-width="6.5" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-s" d="M 120,160 C 125,130 135,110 140,90" 
+                  stroke="#523f2f" stroke-width="6.5" stroke-linecap="round" fill="none" />
             
-            <!-- Middle top Branch -->
-            <path class="tree-path branch branch-c" d="M 200,200 C 190,160 210,130 200,100" 
-                  stroke="url(#tree-wood)" stroke-width="7" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-s" d="M 200,120 C 175,100 165,80 150,60" 
+                  stroke="#523f2f" stroke-width="6" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-s" d="M 200,120 C 225,100 235,80 250,60" 
+                  stroke="#523f2f" stroke-width="6" stroke-linecap="round" fill="none" />
             
-            <!-- Left Sub Branch -->
-            <path class="tree-path branch branch-l2" d="M 120,150 C 100,130 90,110 80,100" 
-                  stroke="url(#tree-wood)" stroke-width="5" stroke-linecap="round" fill="none" />
-            
-            <!-- Right Sub Branch -->
-            <path class="tree-path branch branch-r2" d="M 280,140 C 300,120 310,100 320,90" 
-                  stroke="url(#tree-wood)" stroke-width="5" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-s" d="M 280,150 C 275,120 265,100 260,90" 
+                  stroke="#523f2f" stroke-width="6.5" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-s" d="M 280,150 C 305,140 325,120 340,100" 
+                  stroke="#523f2f" stroke-width="6.5" stroke-linecap="round" fill="none" />
 
-            <!-- Leaves & Fruits positioned by translate groups -->
-            <!-- Left Sub Branch Tip (80, 100) -->
-            <g class="tree-bloom leaf-group-1" transform="translate(80, 100)">
+            <!-- Tertiary Twigs -->
+            <path class="tree-path branch-t" d="M 60,110 C 45,100 35,90 25,85" stroke="#523f2f" stroke-width="4.5" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-t" d="M 60,110 C 55,90 50,75 45,70" stroke="#523f2f" stroke-width="4.5" stroke-linecap="round" fill="none" />
+            
+            <path class="tree-path branch-t" d="M 140,90 C 130,70 125,55 120,50" stroke="#523f2f" stroke-width="4.5" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-t" d="M 140,90 C 150,70 160,55 165,50" stroke="#523f2f" stroke-width="4.5" stroke-linecap="round" fill="none" />
+            
+            <path class="tree-path branch-t" d="M 150,60 C 135,45 130,35 125,30" stroke="#523f2f" stroke-width="4" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-t" d="M 150,60 C 155,45 160,35 165,30" stroke="#523f2f" stroke-width="4" stroke-linecap="round" fill="none" />
+            
+            <path class="tree-path branch-t" d="M 250,60 C 240,45 235,35 230,30" stroke="#523f2f" stroke-width="4" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-t" d="M 250,60 C 265,45 270,35 275,30" stroke="#523f2f" stroke-width="4" stroke-linecap="round" fill="none" />
+            
+            <path class="tree-path branch-t" d="M 260,90 C 240,70 235,55 230,50" stroke="#523f2f" stroke-width="4.5" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-t" d="M 260,90 C 270,70 275,55 280,50" stroke="#523f2f" stroke-width="4.5" stroke-linecap="round" fill="none" />
+            
+            <path class="tree-path branch-t" d="M 340,100 C 345,80 350,65 355,60" stroke="#523f2f" stroke-width="4.5" stroke-linecap="round" fill="none" />
+            <path class="tree-path branch-t" d="M 340,100 C 355,90 365,80 375,75" stroke="#523f2f" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+            <!-- Blooms (Leaves & Fruits) -->
+            <!-- Tip 1 (25, 85) -->
+            <g class="tree-bloom" data-x="25" data-y="85" transform="translate(25, 85) scale(0)">
               <path class="tree-leaf" d="M0,0 C-10,-10 -25,-10 -30,0 C-20,10 -10,5 0,0" fill="url(#olive-leaf-grad)" />
+            </g>
+            <!-- Tip 2 (45, 70) -->
+            <g class="tree-bloom" data-x="45" data-y="70" transform="translate(45, 70) scale(0)">
               <path class="tree-leaf" d="M0,0 C-5,-15 5,-25 20,-20 C15,-5 5,0 0,0" fill="#5a7029" />
-              <circle class="tree-olive" cx="-10" cy="-5" r="5.5" fill="#d4a574" />
+              <circle class="tree-olive" cx="-10" cy="-5" r="5" fill="#d4a574" />
             </g>
-
-            <!-- Left Branch Middle (120, 150) -->
-            <g class="tree-bloom leaf-group-2" transform="translate(120, 150)">
+            <!-- Tip 3 (120, 50) -->
+            <g class="tree-bloom" data-x="120" data-y="50" transform="translate(120, 50) scale(0)">
+              <path class="tree-leaf" d="M0,0 C-10,-15 5,-25 20,-15 C15,-5 5,0 0,0" fill="url(#olive-leaf-grad)" />
+            </g>
+            <!-- Tip 4 (165, 50) -->
+            <g class="tree-bloom" data-x="165" data-y="50" transform="translate(165, 50) scale(0)">
+              <path class="tree-leaf" d="M0,0 C10,-15 -5,-25 -20,-15 C-15,-5 -5,0 0,0" fill="#5a7029" />
+              <circle class="tree-olive" cx="5" cy="-8" r="5.5" fill="#b08453" />
+            </g>
+            <!-- Tip 5 (125, 30) -->
+            <g class="tree-bloom" data-x="125" data-y="30" transform="translate(125, 30) scale(0)">
+              <path class="tree-leaf" d="M0,0 C-12,-8 -20,-2 -25,-10 C-15,-15 -5,-10 0,0" fill="url(#olive-leaf-grad)" />
+            </g>
+            <!-- Tip 6 (165, 30) -->
+            <g class="tree-bloom" data-x="165" data-y="30" transform="translate(165, 30) scale(0)">
+              <path class="tree-leaf" d="M0,0 C12,-8 20,-2 25,-10 C15,-15 5,-10 0,0" fill="#5a7029" />
+              <circle class="tree-olive" cx="8" cy="-5" r="5" fill="#d4a574" />
+            </g>
+            <!-- Tip 7 (230, 30) -->
+            <g class="tree-bloom" data-x="230" data-y="30" transform="translate(230, 30) scale(0)">
+              <path class="tree-leaf" d="M0,0 C-12,-8 -20,-2 -25,-10 C-15,-15 -5,-10 0,0" fill="url(#olive-leaf-grad)" />
+              <circle class="tree-olive" cx="-8" cy="-5" r="5.5" fill="#d4a574" />
+            </g>
+            <!-- Tip 8 (275, 30) -->
+            <g class="tree-bloom" data-x="275" data-y="30" transform="translate(275, 30) scale(0)">
+              <path class="tree-leaf" d="M0,0 C12,-8 20,-2 25,-10 C15,-15 5,-10 0,0" fill="#5a7029" />
+            </g>
+            <!-- Tip 9 (230, 50) -->
+            <g class="tree-bloom" data-x="230" data-y="50" transform="translate(230, 50) scale(0)">
+              <path class="tree-leaf" d="M0,0 C-10,-15 5,-25 20,-15 C15,-5 5,0 0,0" fill="url(#olive-leaf-grad)" />
+              <circle class="tree-olive" cx="-5" cy="-8" r="5" fill="#b08453" />
+            </g>
+            <!-- Tip 10 (280, 50) -->
+            <g class="tree-bloom" data-x="280" data-y="50" transform="translate(280, 50) scale(0)">
+              <path class="tree-leaf" d="M0,0 C10,-15 -5,-25 -20,-15 C-15,-5 -5,0 0,0" fill="#5a7029" />
+            </g>
+            <!-- Tip 11 (355, 60) -->
+            <g class="tree-bloom" data-x="355" data-y="60" transform="translate(355, 60) scale(0)">
+              <path class="tree-leaf" d="M0,0 C5,-15 -5,-25 -20,-20 C-15,-5 -5,0 0,0" fill="url(#olive-leaf-grad)" />
+              <circle class="tree-olive" cx="-10" cy="-5" r="5" fill="#d4a574" />
+            </g>
+            <!-- Tip 12 (375, 75) -->
+            <g class="tree-bloom" data-x="375" data-y="75" transform="translate(375, 75) scale(0)">
+              <path class="tree-leaf" d="M0,0 C10,-10 25,-10 30,0 C20,10 10,5 0,0" fill="#5a7029" />
+            </g>
+            
+            <!-- Additional Fork Clusters -->
+            <!-- Fork 1 (60, 110) -->
+            <g class="tree-bloom" data-x="60" data-y="110" transform="translate(60, 110) scale(0)">
               <path class="tree-leaf" d="M0,0 C-15,5 -25,-5 -30,-15 C-15,-15 -5,-5 0,0" fill="url(#olive-leaf-grad)" />
-              <circle class="tree-olive" cx="-10" cy="5" r="5" fill="#b08453" />
             </g>
-
-            <!-- Center Top Tip (200, 100) -->
-            <g class="tree-bloom leaf-group-3" transform="translate(200, 100)">
-              <path class="tree-leaf" d="M0,0 C-10,-15 -5,-30 10,-30 C15,-15 10,0 0,0" fill="url(#olive-leaf-grad)" />
-              <path class="tree-leaf" d="M0,0 C10,-15 5,-30 -10,-30 C-15,-15 -10,0 0,0" fill="#5a7029" />
-              <circle class="tree-olive" cx="0" cy="-15" r="5.5" fill="#d4a574" />
+            <!-- Fork 2 (140, 90) -->
+            <g class="tree-bloom" data-x="140" data-y="90" transform="translate(140, 90) scale(0)">
+              <path class="tree-leaf" d="M0,0 C-10,15 -5,25 5,20 C10,10 5,0 0,0" fill="#5a7029" />
+              <circle class="tree-olive" cx="3" cy="12" r="5" fill="#b08453" />
             </g>
-
-            <!-- Right Sub Branch Tip (320, 90) -->
-            <g class="tree-bloom leaf-group-4" transform="translate(320, 90)">
-              <path class="tree-leaf" d="M0,0 C10,-10 25,-10 30,0 C20,10 10,5 0,0" fill="url(#olive-leaf-grad)" />
-              <path class="tree-leaf" d="M0,0 C5,-15 -5,-25 -20,-20 C-15,-5 -5,0 0,0" fill="#5a7029" />
-              <circle class="tree-olive" cx="10" cy="-5" r="5" fill="#d4a574" />
+            <!-- Fork 3 (150, 60) -->
+            <g class="tree-bloom" data-x="150" data-y="60" transform="translate(150, 60) scale(0)">
+              <path class="tree-leaf" d="M0,0 C-15,5 -25,-5 -30,-15 C-15,-15 -5,-5 0,0" fill="url(#olive-leaf-grad)" />
             </g>
-
-            <!-- Right Branch Middle (280, 140) -->
-            <g class="tree-bloom leaf-group-5" transform="translate(280, 140)">
+            <!-- Fork 4 (250, 60) -->
+            <g class="tree-bloom" data-x="250" data-y="60" transform="translate(250, 60) scale(0)">
               <path class="tree-leaf" d="M0,0 C15,5 25,-5 30,-15 C15,-15 5,-5 0,0" fill="url(#olive-leaf-grad)" />
-              <circle class="tree-olive" cx="10" cy="5" r="5.5" fill="#b08453" />
             </g>
-
-            <!-- Extra Leaf clusters for lush look -->
-            <!-- Middle Left (160, 170) -->
-            <g class="tree-bloom leaf-group-6" transform="translate(160, 170)">
-              <path class="tree-leaf" d="M0,0 C-10,10 -20,15 -25,5 C-15,-5 -5,-5 0,0" fill="url(#olive-leaf-grad)" />
+            <!-- Fork 5 (260, 90) -->
+            <g class="tree-bloom" data-x="260" data-y="90" transform="translate(260, 90) scale(0)">
+              <path class="tree-leaf" d="M0,0 C10,15 5,25 -5,20 C-10,10 -5,0 0,0" fill="#5a7029" />
+              <circle class="tree-olive" cx="-3" cy="12" r="5" fill="#b08453" />
             </g>
-            <!-- Middle Right (240, 160) -->
-            <g class="tree-bloom leaf-group-7" transform="translate(240, 160)">
-              <path class="tree-leaf" d="M0,0 C10,10 20,15 25,5 C15,-5 5,-5 0,0" fill="url(#olive-leaf-grad)" />
+            <!-- Fork 6 (340, 100) -->
+            <g class="tree-bloom" data-x="340" data-y="100" transform="translate(340, 100) scale(0)">
+              <path class="tree-leaf" d="M0,0 C15,5 25,-5 30,-15 C15,-15 5,-5 0,0" fill="url(#olive-leaf-grad)" />
             </g>
           </svg>
         </div>
