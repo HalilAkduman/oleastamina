@@ -1152,13 +1152,12 @@
         </ul>
       </div>
 
-      <form style="display:grid; gap:10px; position:relative; z-index:1;"
-            onsubmit="event.preventDefault(); this.querySelector('button').innerText='Teşekkürler ✓';">
-        <input type="text"  required placeholder="Adınız Soyadınız"
+      <form id="contact-form" style="display:grid; gap:10px; position:relative; z-index:1;">
+        <input type="text" name="name" required placeholder="Adınız Soyadınız"
                style="padding: 14px 20px; border-radius: var(--radius-pill); border:1px solid rgba(45,58,33,0.18); background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); font-family:inherit;" />
-        <input type="email" required placeholder="E-posta"
+        <input type="email" name="email" required placeholder="E-posta"
                style="padding: 14px 20px; border-radius: var(--radius-pill); border:1px solid rgba(45,58,33,0.18); background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); font-family:inherit;" />
-        <textarea rows="3" required placeholder="Mesajınız"
+        <textarea name="message" rows="3" required placeholder="Mesajınız"
                   style="padding: 14px 20px; border-radius: var(--radius); border:1px solid rgba(45,58,33,0.18); background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); font-family:inherit;"></textarea>
         <button class="btn btn--pulse" data-magnet style="justify-self: start;">Gönder <svg><use href="#i-arrow"/></svg></button>
       </form>
@@ -1246,6 +1245,18 @@
     <span class="footer-meta">Erken Hasat · Soğuk Sıkım · Natürel Sızma</span>
   </div>
 </footer>
+
+<!-- Success Modal -->
+<div class="modal-overlay" id="success-modal">
+  <div class="modal-card">
+    <div class="modal-icon">
+      <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+    </div>
+    <h3 style="font-family:'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--olive-800);">Mesajınız Alındı!</h3>
+    <p class="muted" style="margin: 12px 0 24px; font-size: 0.95rem; line-height: 1.5;">Bizimle iletişime geçtiğiniz için teşekkür ederiz. En kısa sürede e-posta adresiniz üzerinden geri dönüş sağlayacağız.</p>
+    <button class="btn mx-auto" id="close-modal-btn" style="min-width: 120px; justify-content: center;">Kapat</button>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 <script src="js/liquid.js"></script>

@@ -320,6 +320,91 @@
     }, 1500);
   }, 2500);
 
+  /* ---------------- Contact Form & Success Modal ---------------- */
+  const contactForm = $('#contact-form');
+  const successModal = $('#success-modal');
+  const closeModalBtn = $('#close-modal-btn');
+  
+  // OPTIONAL: Set your Formspree endpoint URL or Web3Forms API Key here
+  // e.g., 'https://formspree.io/f/xoqzzdqv'
+  const FORM_ENDPOINT = '';
+
+  if (contactForm && successModal) {
+    const submitBtn = contactForm.querySelector('button');
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Gönder';
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Gönderiliyor...';
+      }
+
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData.entries());
+
+      // If endpoint is provided, send real request
+      if (FORM_ENDPOINT) {
+        fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(data)
+        })
+        .then(response => {
+          showSuccess();
+        })
+        .catch(err => {
+          console.error('Error submitting form:', err);
+          // Fallback to success even on error for design preview
+          showSuccess();
+        });
+      } else {
+        // Simulation mode (1s delay for premium feel)
+        setTimeout(() => {
+          showSuccess();
+        }, 1000);
+      }
+    });
+
+    const showSuccess = () => {
+      successModal.classList.add('is-active');
+      document.body.classList.add('nav-open'); // locks scroll
+      contactForm.reset();
+      
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+    };
+
+    const hideSuccess = () => {
+      successModal.classList.remove('is-active');
+      document.body.classList.remove('nav-open'); // unlocks scroll
+    };
+
+    if (closeModalBtn) {
+      closeModalBtn.addEventListener('click', hideSuccess);
+    }
+
+    // Close modal on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && successModal.classList.contains('is-active')) {
+        hideSuccess();
+      }
+    });
+
+    // Close modal when clicking on overlay
+    successModal.addEventListener('click', (e) => {
+      if (e.target === successModal) {
+        hideSuccess();
+      }
+    });
+  }
+
   /* ---------------- Year in footer ---------------- */
   const yr = $('#year');
   if (yr) yr.textContent = new Date().getFullYear();

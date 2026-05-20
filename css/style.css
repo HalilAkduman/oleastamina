@@ -988,6 +988,56 @@ img, svg { max-width: 100%; display: block; }
 html, body { overflow-x: hidden; }
 img { max-width: 100%; height: auto; }
 
+/* --- Success Modal --- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(45, 58, 33, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-fluid);
+}
+.modal-overlay.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-card {
+  background: var(--cream-50);
+  padding: 40px;
+  border-radius: 28px;
+  max-width: 440px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 30px 60px -15px rgba(45, 58, 33, 0.25);
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.5s var(--ease-fluid);
+  border: 1px solid rgba(212, 165, 116, 0.2);
+}
+.modal-overlay.is-active .modal-card {
+  transform: scale(1) translateY(0);
+}
+.modal-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--olive-600);
+  color: var(--cream-50);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 10px 25px -5px rgba(106, 142, 35, 0.4);
+}
+.modal-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
