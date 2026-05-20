@@ -475,26 +475,26 @@
       // 1. Update progress bar width
       if (progressBar) progressBar.style.width = `${progress * 100}%`;
 
-      // 2. Trunk growth (0.0 to 0.25)
-      const trunkProgress = Math.max(0, Math.min(1, progress / 0.25));
+      // 2. Trunk growth (0.0 to 0.12)
+      const trunkProgress = Math.max(0, Math.min(1, progress / 0.12));
       const tLen = trunk.totalLength || 150;
       trunk.style.strokeDashoffset = tLen - (tLen * trunkProgress);
 
-      // 3. Primary branches (0.20 to 0.50)
-      animatePaths(branchP, 0.20, 0.50, progress);
+      // 3. Primary branches (0.08 to 0.30)
+      animatePaths(branchP, 0.08, 0.30, progress);
 
-      // 4. Secondary branches (0.45 to 0.70)
-      animatePaths(branchS, 0.45, 0.70, progress);
+      // 4. Secondary branches (0.25 to 0.48)
+      animatePaths(branchS, 0.25, 0.48, progress);
 
-      // 5. Tertiary twigs (0.65 to 0.85)
-      animatePaths(branchT, 0.65, 0.85, progress);
+      // 5. Tertiary twigs (0.42 to 0.62)
+      animatePaths(branchT, 0.42, 0.62, progress);
 
-      // 6. Blooms (0.80 to 1.0)
+      // 6. Blooms (0.55 to 0.75)
       blooms.forEach((bloom, index) => {
         const x = bloom.getAttribute('data-x') || '0';
         const y = bloom.getAttribute('data-y') || '0';
-        const staggerDelay = index * 0.008;
-        const bloomProgress = Math.max(0, Math.min(1, (progress - 0.78 - staggerDelay) / 0.16));
+        const staggerDelay = index * 0.005;
+        const bloomProgress = Math.max(0, Math.min(1, (progress - 0.55 - staggerDelay) / 0.15));
         
         bloom.setAttribute('transform', `translate(${x}, ${y}) scale(${bloomProgress})`);
         bloom.style.opacity = bloomProgress;
