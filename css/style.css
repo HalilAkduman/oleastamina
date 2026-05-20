@@ -69,7 +69,7 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1, h2, h3, h4, .serif {
@@ -985,7 +985,7 @@ img, svg { max-width: 100%; display: block; }
 }
 
 /* --- Prevent horizontal overflow on all screens --- */
-html, body { overflow-x: hidden; }
+html, body { overflow-x: clip; }
 img { max-width: 100%; height: auto; }
 
 /* --- Success Modal --- */
